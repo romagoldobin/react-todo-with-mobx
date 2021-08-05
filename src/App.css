@@ -1,20 +1,25 @@
 .Container {
+  /*  display: flex !important; +  margin: auto;(.ToDO) and overflow: hidden;(.ToDo)*/
+  display: flex !important;
   height: 100%;
 }
 
 .ToDo {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 600px;
   padding: 16px;
   margin: auto;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .ToDo__Item {
   display: flex;
   align-items: center;
+}
+
+.ToDo__Item:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .ToDo__Text {
@@ -29,21 +34,14 @@
 }
 
 .ToDo__Body {
-  display: flex;
-  flex-direction: column;
   flex: 1;
   overflow: auto;
+  margin: 8px 0;
 }
 
 .ToDo__Footer {
   display: flex;
   flex-direction: column;
-}
-
-.Wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
 }
 
 .Form {
