@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+.Container {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ToDo {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 600px;
+  padding: 16px;
+  margin: auto;
+  overflow: auto;
+}
+
+.ToDo__Item {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ToDo__Text {
+  flex: 1;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ToDo__Text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ToDo__Body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+}
+
+.ToDo__Footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.Wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.Form {
+  display: flex;
+}
+
+.FullWidth {
+  flex: 1;
+}
+
+.TextField + .Button {
+  margin-left: 8px;
+}
+
+.Center {
+  margin: auto;
 }
