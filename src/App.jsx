@@ -82,7 +82,7 @@ const App = observer(() => (
 ));
 
 ToDoList.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 ToDoItem.propTypes = {
