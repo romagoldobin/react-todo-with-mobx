@@ -7,9 +7,10 @@
 .ToDo {
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 600px;
   padding: 16px;
-  margin: auto;
+  margin: auto 0;
   overflow: hidden;
 }
 
