@@ -17,6 +17,7 @@ import {
   TextField,
   Toolbar,
   Typography,
+  Tooltip,
   IconButton,
 } from '@material-ui/core';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
@@ -33,10 +34,14 @@ const ToDoItem = ({ task, onChangeStatusHandler, onDeleteHandler }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Checkbox color="secondary" size="small" checked={isDone} onChange={onChangeStatusHandler} inputProps={{ 'aria-label': 'to do checked/unchecked' }} />
-        <IconButton color="secondary" onClick={onDeleteHandler}>
-          <DeleteOutlineIcon fontSize="small" />
-        </IconButton>
+        <Tooltip title={isDone ? 'Mark as undone' : 'Mark as done'}>
+          <Checkbox color="secondary" size="small" checked={isDone} onChange={onChangeStatusHandler} inputProps={{ 'aria-label': 'to do checked/unchecked' }} />
+        </Tooltip>
+        <Tooltip title="Delete">
+          <IconButton color="secondary" onClick={onDeleteHandler}>
+            <DeleteOutlineIcon fontSize="small" />
+          </IconButton>
+        </Tooltip>
       </CardActions>
     </Card>
   );
