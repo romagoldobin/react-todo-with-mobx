@@ -34,10 +34,10 @@ const ToDoItem = ({ task, onChangeStatusHandler, onDeleteHandler }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Tooltip title={isDone ? 'Mark as undone' : 'Mark as done'}>
+        <Tooltip title={isDone ? 'Mark as undone' : 'Mark as done'} aria-label="Mark to do as done/undone" arrow>
           <Checkbox color="secondary" size="small" checked={isDone} onChange={onChangeStatusHandler} inputProps={{ 'aria-label': 'to do checked/unchecked' }} />
         </Tooltip>
-        <Tooltip title="Delete">
+        <Tooltip title="Delete" aria-label="Delete to do" arrow>
           <IconButton color="secondary" onClick={onDeleteHandler}>
             <DeleteOutlineIcon fontSize="small" />
           </IconButton>
